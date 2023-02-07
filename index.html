@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+
+    </head>
+    <body>
+        <h1>People counter</h1>
+        <h2 id="count-el">0</h2>
+        <button id="intcrement-btn" onclick="increment()">INCREMENT</button>
+        <br>
+        <button id="save-btn" onclick="save()">SAVE</button>
+        <p id="save-el">Previous entires: </p>
+
+    </body>
+    <script>
+        let count = 0
+        let saveEl= document.getElementById("save-el")
+        let countEl =document.getElementById("count-el")
+        function increment()
+        { 
+            count = count +1   
+            countEl.textContent =count
+        }
+        function save(){
+            let countstr=count + " - "
+            saveEl.textContent += countstr
+
+            countEl.textContent =0
+            count=0
+        }
+        
+
+    </script>
+</html>
